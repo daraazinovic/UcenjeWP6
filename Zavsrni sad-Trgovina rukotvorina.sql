@@ -3,31 +3,31 @@
 go
 drop database if exists trgovinarukotvorina;
 go
-create database trgovinarukotvorina;
+create database trgovinarukotvorina collate Croatian_CI_AS;
 go
 use trgovinarukotvorina;
 go
 create table proizvodi(
-sifra int,
-naziv varchar(50),
-izradujeseod varchar(50),
-cijena int,
-namjena varchar(50)
+sifra int not null primary key identity(1,1),
+naziv varchar(50) not null,
+izradujeseod varchar(50) references materijali(sifra),
+cijena int not null,
+namjena varchar(50) not null 
 );
 
 create table materijali(
-sifra int,
-naziv varchar(30),
-vrsta varchar(30)
+sifra int not null primary key identity(1,1),
+naziv varchar(30)not null,
+vrsta varchar(30) references vrste(sifra)
 );
 
 create table vrste(
-sifra int,
-naziv varchar(50)
+sifra int not null primary key identity(1,1),
+naziv varchar(50) references materijali(sifra)
 );
 
 create table sastavnica(
-sifra int,
-proizvodi varchar(50),
-materijali varchar(50)
+sifra int not null primary key identity(1,1),
+proizvodi varchar(50) references proizvodi(sifra),
+materijali varchar(50) references materijali(sifra)
 );
