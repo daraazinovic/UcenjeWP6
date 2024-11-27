@@ -57,3 +57,16 @@ values('Figura bicikli', 'beton', 15, 'Ukras za dom')
 insert into proizvodi(naziv,izradujeseod,cijena,namjena)
 values('Set kućice i vaze sa lučicom', 'beton,vosak i cvijeće', 20,'Ukras za dom')
 
+
+
+insert into vrste(sastav)
+values('Drvo hrast');
+
+insert into vrste(sastav)
+values('Keramički prah');
+
+insert into vrste(sastav)
+values('Vosak');
+
+insert into vrste(sastav)
+values('Umjetno cvijeće');
