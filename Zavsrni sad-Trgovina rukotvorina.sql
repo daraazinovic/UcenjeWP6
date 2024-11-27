@@ -70,3 +70,40 @@ values('Vosak');
 
 insert into vrste(sastav)
 values('Umjetno cvijeće');
+
+
+
+insert into materijali(naziv,vrsta)
+values('Lamele parketa',1);
+
+insert into materijali(naziv,vrsta)
+values('Keramički beton', 2);
+
+insert into materijali(naziv,vrsta)
+values('Svijeća',3);
+
+insert into materijali(naziv,vrsta)
+values('Cvijeće',4);
+
+
+
+insert into sastavnice(proizvod,materijal)
+values(1,3);
+
+insert into sastavnice(proizvod,materijal)
+values(2,2);
+
+insert into sastavnice(proizvod,materijal)
+values(3,2);
+
+insert into sastavnice(proizvod,materijal)
+values(4,2);
+
+insert into sastavnice(proizvod,materijal)
+values(5,2);
+
+insert into sastavnice(proizvod,materijal)
+values(6,2);
+
+insert into sastavnice(proizvod,materijal)
+values(7,2);
