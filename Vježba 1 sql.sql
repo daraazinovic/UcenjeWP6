@@ -26,3 +26,13 @@ rednibroj int not null references zaposlenici(sifra),
 putanja varchar(50)
 );
 
+
+
+insert into zaposlenici(ime,prezime,datumrodenja,placa,invalid)
+values('Marko','Marić', '1995-09-25',1230.58,'ne');
+
+insert into zaposlenici(ime,prezime,datumrodenja,placa,invalid)
+values('Ivan','Horvat','1993-05-15',1156.43,'ne');
+
+insert into zaposlenici(ime,prezime,datumrodenja,placa,invalid)
+values('Filip','Knežević','1998-02-09',1130.20,'ne');
