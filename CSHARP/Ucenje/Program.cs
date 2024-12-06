@@ -2,11 +2,23 @@
 
 using Ucenje;
 
-E03_Operatori.Izvedi();
+E04Z3.Izvedi();
+
+//E04Z2.Izvedi();
+
+//E06Nizovi.Izvedi();
+
+//E05UvjetnoGrananjeSwitch.Izvedi();
+
+//E04Z1.Izvedi();
+
+//E04UvjetnoGrananje.Izvedi();
+
+//E03Operatori.Izvedi();
 
 //E02Z1.Izvedi();
 
-//E02_Varijable_Tipovi_podataka.Izvedi();
+//E02VarijableTipoviPodataka.Izvedi();
 
 //E01UlazIzlaz.Izvedi();
 
