@@ -11,6 +11,10 @@ namespace Ucenje
         public static void Izvedi()
         {
             Console.WriteLine("E04Z3");
+
+            Console.WriteLine("Unesi dva cijela broja");
+            int broj = int.Parse(Console.ReadLine());
+            if ()
         }
             
     }
