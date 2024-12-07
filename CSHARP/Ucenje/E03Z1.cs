@@ -42,7 +42,7 @@ namespace Ucenje
             int kvadratbroj2 = broj3 * broj4;
             int zbrojkvadrata = kvadratbroj1 + kvadratbroj2;
             {
-                Console.WriteLine("Zbroj kvadrata {0} i {1} je {2}");
+                Console.WriteLine("Zbroj kvadrata {0} i {1} je: {2}", kvadratbroj1, kvadratbroj2, zbrojkvadrata);
             }
         }
         
