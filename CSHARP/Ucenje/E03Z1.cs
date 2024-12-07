@@ -44,6 +44,11 @@ namespace Ucenje
             {
                 Console.WriteLine("Zbroj kvadrata {0} i {1} je: {2}", kvadratbroj1, kvadratbroj2, zbrojkvadrata);
             }
+
+            int kvocjent = broj3 / broj4;
+            {
+                Console.WriteLine("Kvocjent dva broja {0} i {1}: {2}", broj3, broj4, kvocjent);
+            }
         }
         
        
