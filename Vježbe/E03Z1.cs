@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace Ucenje
 {
 
-    internal class E03Z1    {
-
+    internal class E03Z1
+    {
         public static void Izvedi()
         {
             Console.Write("Unesite prvi cijeli broj: ");
@@ -26,6 +26,8 @@ namespace Ucenje
             Console.WriteLine("Zbroj je: {0}", zbroj);
             Console.WriteLine("Razlika je: {0}", razlika);
         }
+        
+       
     }
 
 }
