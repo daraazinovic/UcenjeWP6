@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-E03Z1.Izvedi();
+E04Z4.Izvedi();
+
+//E03Z1.Izvedi();
 
 //E04Z3.Izvedi();
 
