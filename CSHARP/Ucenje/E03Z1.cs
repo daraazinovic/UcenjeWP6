@@ -29,6 +29,21 @@ namespace Ucenje
             {
                 Console.WriteLine("Umnozak je: {0} ", umnozak);
             }
+
+            Console.Write("Unesite prvi broj: ");
+            int broj3 = int.Parse(Console.ReadLine());
+            Console.Write("Unesite drugi broj: ");
+            int broj4 = int.Parse(Console.ReadLine());
+            {
+                Console.WriteLine("Uneseni brojevi su {0} i {1}", broj3, broj4);
+            } 
+
+            int kvadratbroj1 = broj3 * broj4;
+            int kvadratbroj2 = broj3 * broj4;
+            int zbrojkvadrata = kvadratbroj1 + kvadratbroj2;
+            {
+                Console.WriteLine("Zbroj kvadrata {0} i {1} je {2}");
+            }
         }
         
        
