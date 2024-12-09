@@ -94,6 +94,35 @@ namespace Ucenje
                 }
                 Console.WriteLine();
             }
+
+
+            for(int i =0; i<10; i++)
+            {
+                if (i == 3)
+                {
+                    continue;
+                }
+
+                if (i== 7)
+                {
+                    break;
+                }
+
+                Console.WriteLine(i);
+            }
+
+            for(int i = 0; i>=0; i++)
+            {
+                Console.WriteLine(i);
+                break;
+            }
+
+
+            for(; ; )
+            {
+                Console.WriteLine(new Random().NextInt64() + "" + new Random().NextInt64() + "" + new Random().NextInt64());
+                Thread.Sleep(300);
+            }
             
                  
         }
