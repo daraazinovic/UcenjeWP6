@@ -2,15 +2,9 @@
 
 using Ucenje;
 
-E04Z3.Izvedi();
+E07ForPetlja.Izvedi();
 
-//E04Z4.Izvedi();
-
-//E03Z1.Izvedi();
-
-//E04Z3.Izvedi();
-
-//E04Z2.Izvedi();
+//04Z2.Izvedi();
 
 //E06Nizovi.Izvedi();
 
@@ -18,7 +12,7 @@ E04Z3.Izvedi();
 
 //E04Z1.Izvedi();
 
-//E04UvjetnoGrananje.Izvedi();
+//E04UvjetnoGrananjeIf.Izvedi();
 
 //E03Operatori.Izvedi();
 
