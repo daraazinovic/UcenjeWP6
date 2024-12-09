@@ -122,6 +122,7 @@ namespace Ucenje
             {
                 Console.WriteLine(new Random().NextInt64() + "" + new Random().NextInt64() + "" + new Random().NextInt64());
                 Thread.Sleep(300);
+                break;
             }
             
                  

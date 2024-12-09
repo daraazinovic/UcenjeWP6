@@ -2,7 +2,12 @@
 
 using Ucenje;
 
-E07ForPetlja.Izvedi();
+E07Z2.Izvedi();
+
+
+//E07Z1.Izvedi();
+
+//E07ForPetlja.Izvedi();
 
 //04Z2.Izvedi();
 
