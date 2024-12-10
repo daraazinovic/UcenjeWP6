@@ -15,13 +15,19 @@ namespace Ucenje
 
 
             Console.WriteLine("Unesi drugi cijeli broj");
-            int db = int.Parse(Console.ReadLine()); 
+            int db = int.Parse(Console.ReadLine());
 
-            for(int i = pb; i < db; i++)
+            for (int i = pb; i < db; i++)
+       
+
+                {
+                    Console.WriteLine(i);
+                }
+            for (int j = pb; j > db; j--)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(j);
             }
-            
+
         }
     }
 }
