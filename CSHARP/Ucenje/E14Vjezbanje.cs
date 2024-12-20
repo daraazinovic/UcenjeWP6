@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace Ucenje
@@ -17,17 +18,35 @@ namespace Ucenje
 
         private static void Izbornik()
         {
+
+            string[] programi =
+            {
+                "Parnost broja",
+                "Tablica množenja",
+                "Jedenična vrijednost"
+            };
+
             Console.WriteLine();
             Console.WriteLine("IZBORNIK");
-            Console.WriteLine("1. Parnost broja");
-            Console.WriteLine("2. Tablica množenja");
-            Console.WriteLine("0. Izlaz iz programa");
-            OdabirOpcijeIzbornika();
+
+            for(int i = 0; i < programi.Length; i++)
+            {
+                Console.WriteLine(i+1) + "{0}. {1} ", i+1, programi[i]);
+            }
+
+        
+        
+
+
+      
+
+         
+          OdabirOpcijeIzbornika();
         }
 
         private static void OdabirOpcijeIzbornika()
         {
-            switch (E12Metode.UcitajCijeliBroj("Odaberi stavku izbornika: ", 0, 2))
+            switch (E12Metode.UcitajCijeliBroj("Odaberi stavku izbornika: ", 0, 3))
             {
                 case 0:
                     break;
@@ -39,6 +58,10 @@ namespace Ucenje
                     TablicaMnozenja();
                     Izbornik();
                     break;
+                case 3:
+                    JedinicnaVrijednost();
+                    Izbornik();
+                    break;
             }
         }
 
@@ -46,6 +69,17 @@ namespace Ucenje
 
         {
             NaslovPrograma("Program koji za dane brojeve redaka i stupaca generira tablicu množenja");
+            int redaka = E12Metode.UcitajCijeliBroj("Unesi broj redaka: ", 2, 10);
+            int stupaca = E12Metode.UcitajCijeliBroj("Unesi broj stupaca: ", 2, 10);
+
+            for(int i=1; i<=redaka; i++)
+            {
+                for(int j=1; j<=stupaca; j++)
+                {
+                    Console.Write("{0,4}",i*j );
+                }
+                Console.WriteLine();
+            }
 
         }
 
@@ -69,17 +103,27 @@ namespace Ucenje
         private static void NaslovPrograma(string naslov)
         {
 
-            Zvjezdice(naslov.Length);
+            NaglasiNaslov(naslov.Length);
             Console.WriteLine(naslov);
-            Zvjezdice(naslov.Length);
+            NaglasiNaslov(naslov.Length);
         }
-        private static void Zvjezdice(int komada)
+        private static void NaglasiNaslov(int komada)
         {
+            return;
             for (int i = 0; i < komada; i++)
             {
-                Console.Write("*");
+                Console.Write("-");
             }
             Console.WriteLine();
+
+        }
+
+        private static void JedinicnaVrijednost()
+        {
+            NaslovPrograma("Jedinična vrijednost");
+            int broj = E12Metode.UcitajCijeliBroj("Unesi broj između 20 i 50: ", 20, 50);
+                Console.WriteLine(broj%10);
+
 
         }
     }
