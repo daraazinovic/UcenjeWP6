@@ -139,6 +139,8 @@ namespace Ucenje
         }
 
 
+
+
         public static int UcitajCijeliBroj(string poruka, int min, int max)
         {
             int i;
@@ -148,9 +150,9 @@ namespace Ucenje
                 try
                 {
                     i = int.Parse(Console.ReadLine());
-                    if(i< min || i> max)
+                    if(i<min || i > max)
                     {
-                        Console.WriteLine("Broj nije u danom rasponu {0} - {1}", min, max );
+                        Console.WriteLine("Broj nije u danom rasponu {0} - {1}",min,max);
                         continue;
                     }
                     return i;
