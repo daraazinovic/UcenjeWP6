@@ -192,6 +192,14 @@ namespace Ucenje
 
 
 
+        public static bool UcitajBool(string poruka, string uvjetZaTrue)
+        {
+            Console.Write(poruka);
+            return Console.ReadLine().Trim().ToUpper()==uvjetZaTrue.ToUpper();
+        }
+
+
+
 
     }
 }
