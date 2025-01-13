@@ -14,5 +14,8 @@ namespace Ucenje.E17KlasaObjekt.edunova
         public string? Predavac { get; set; }
         public Smjer Smjer { get; set; } = new Smjer();
         public Polaznik[]? Polaznici { get; set; }
+
+
+        public 
     }
 }
