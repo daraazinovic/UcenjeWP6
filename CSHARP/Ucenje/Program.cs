@@ -2,9 +2,9 @@
 
 using Ucenje;
 
+ZimskiZadaci.Izvedi();
 
-
-E14Vjezbanje.Izvedi();
+//E14Vjezbanje.Izvedi();
 
 //E15Subota.Izvedi();
 
