@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-ZimskiZadaci.Izvedi();
+new Ucenje.E17KlasaObjekt.Program();
+
+//ZimskiZadaci.Izvedi();
 
 //E14Vjezbanje.Izvedi();
 
