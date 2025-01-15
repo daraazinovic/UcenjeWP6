@@ -2,7 +2,7 @@
 
 using Ucenje;
 
-new Ucenje.NasljedivanjePolimorfizam.Program();
+new Ucenje.NasljedivanjePolimorfizam.Program("E18");
 
 // nova instanca klase program
 //new Ucenje.E17KlasaObjekt.Program();
