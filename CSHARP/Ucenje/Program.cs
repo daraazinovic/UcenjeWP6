@@ -2,7 +2,7 @@
 
 using Ucenje;
 
-CiklicnaTablica1.Izvedi();
+new Ucenje.NasljedivanjePolimorfizam.Program();
 
 // nova instanca klase program
 //new Ucenje.E17KlasaObjekt.Program();
