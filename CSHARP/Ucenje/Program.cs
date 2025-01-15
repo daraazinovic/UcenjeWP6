@@ -2,9 +2,11 @@
 
 using Ucenje;
 
-new Ucenje.E17KlasaObjekt.Program();
+CiklicnaTablica1.Izvedi();
 
-//ZimskiZadaci.Izvedi();
+// nova instanca klase program
+//new Ucenje.E17KlasaObjekt.Program();
+
 
 //E14Vjezbanje.Izvedi();
 

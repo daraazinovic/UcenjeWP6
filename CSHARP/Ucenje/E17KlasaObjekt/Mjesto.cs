@@ -3,9 +3,7 @@
     public class Mjesto
     {
         public string Naziv { get; set; } = "";
-
-        public String PostanskiBroj { get; set; } = "";
-
-        public Zupanija? Županija  { get; set; }
+        public string PostanskiBroj { get; set; } = ""; // sada svojstvo nije null nego je prazno
+        public Zupanija? Zupanija { get; set; }
     }
 }

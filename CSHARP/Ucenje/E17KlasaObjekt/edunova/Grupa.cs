@@ -15,7 +15,15 @@ namespace Ucenje.E17KlasaObjekt.edunova
         public Smjer Smjer { get; set; } = new Smjer();
         public Polaznik[]? Polaznici { get; set; }
 
-
-        public 
+        public void DetaljiGrupe()
+        {
+            Console.WriteLine(Naziv);
+            Console.WriteLine(Smjer.Naziv);
+            foreach (Polaznik p in Polaznici?? [])
+            {
+                Console.WriteLine(p.ImePrezime());
+                //Console.WriteLine("{0} {1}", p.Ime, p.Prezime); ovoj liniji nije ovdje mjesto
+            }
+        }
     }
 }
