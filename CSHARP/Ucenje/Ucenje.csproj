@@ -8,6 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="C:\Users\PC\Documents\github\UcenjeWP6\Vježbe\CiklicnaTablica.cs" Link="CiklicnaTablica.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="E17KlasaObjekt\zavrsnirad\" />
   </ItemGroup>
 

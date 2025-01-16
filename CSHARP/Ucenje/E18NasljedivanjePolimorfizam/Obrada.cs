@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E18NasljedivanjePolimorfizam
 {
-    public abstract class Entitet : Object
+    public abstract class Obrada
     {
-        public int Sifra { get; set; }
+        // deklariranje metode - ponašanja koje se mora odraditi ali se ne zna kako
+        public abstract void Procesuiraj();
 
-        public override string ToString()
-        {
-            return Sifra.ToString();
-        }
     }
 }

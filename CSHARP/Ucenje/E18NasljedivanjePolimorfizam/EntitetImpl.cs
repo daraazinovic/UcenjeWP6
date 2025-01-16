@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Ucenje.ZavrsniRad;
-namespace Ucenje.ZavrsniRad
+
+namespace Ucenje.E18NasljedivanjePolimorfizam
 {
-    public abstract class Entitet : Object
+    public class EntitetImpl:Entitet
     {
-        public int Sifra { get; set; }
     }
 }

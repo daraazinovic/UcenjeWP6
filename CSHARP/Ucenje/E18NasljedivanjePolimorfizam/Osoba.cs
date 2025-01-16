@@ -6,23 +6,19 @@ using System.Threading.Tasks;
 
 namespace Ucenje.E18NasljedivanjePolimorfizam
 {
-    internal class Osoba : Entitet
+    public class Osoba : Entitet
     {
         public string Ime { get; set; } = "";
-
         public string Prezime { get; set; } = "";
 
-
-        public Osoba()
-        {
-
+        public Osoba() 
+        { 
         }
-
 
         public Osoba(string ime, string prezime)
         {
-            Ime = ime;
-            Prezime = prezime;
+            Ime=ime;
+            Prezime=prezime;
         }
     }
 }
