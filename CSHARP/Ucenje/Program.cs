@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-CiklicnaTablica.Izvedi();
+GeneratorLozinki.Izvedi();
+
+//CiklicnaTablica.Izvedi();
 
 //new Ucenje.E18NasljedivanjePolimorfizam.Program("E18");
 
