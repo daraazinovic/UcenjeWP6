@@ -2,11 +2,12 @@
 
 using Ucenje;
 
-LjubavniKalkulator.Izvedi();
+
+//LjubavniKalkulator.Izvedi();
 
 //GeneratorLozinki.Izvedi();
 
-//CiklicnaTablica.Izvedi();
+CiklicnaTablica.Izvedi();
 
 //new Ucenje.E18NasljedivanjePolimorfizam.Program("E18");
 
