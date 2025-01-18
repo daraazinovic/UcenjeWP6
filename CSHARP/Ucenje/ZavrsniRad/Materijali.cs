@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ucenje.ZavrsniRad
 {
-    public  class Proizvodi
+   public class Materijali
     {
         public string Naziv { get; set; } ""
-        public string IzradujeSeOd { get; set; } ""
-        public int Cijena { get; set; }""
-        public string Namjena { get; set; }
-
+        public string Vrsta { get; set; } ""
     }
 }
