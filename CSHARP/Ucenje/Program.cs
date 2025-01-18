@@ -1,8 +1,11 @@
 ﻿
 
 using Ucenje;
+using Ucenje.Pozitivan;
 
-PovrsinaPravokutnika.Izvedi();
+PozitivanNegativanbroj.Izvedi();
+
+//PovrsinaPravokutnika.Izvedi();
 
 //LjubavniKalkulator.Izvedi();
 
