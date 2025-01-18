@@ -2,7 +2,9 @@
 
 using Ucenje;
 
-GeneratorLozinki.Izvedi();
+LjubavniKalkulator.Izvedi();
+
+//GeneratorLozinki.Izvedi();
 
 //CiklicnaTablica.Izvedi();
 
