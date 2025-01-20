@@ -8,7 +8,7 @@ namespace Ucenje.ZavrsniRad
 {
     public class Sastavnice
     {
-        public string Proizvod { get; set; }""
-        public string Materijal { get; set; }""
+        public string Proizvod { get; set; }
+        public string Materijal { get; set; }
     }
 }

@@ -1,15 +1,12 @@
 ﻿
 
 using Ucenje;
-using Ucenje.Pozitivan;
 
-PozitivanNegativanbroj.Izvedi();
-
-//PovrsinaPravokutnika.Izvedi();
-
-//LjubavniKalkulator.Izvedi();
+new Ucenje.E19GenericiLambdaEkstenzije.Program();
 
 //GeneratorLozinki.Izvedi();
+
+//LjubavniKalkulator.Izvedi();
 
 //CiklicnaTablica.Izvedi();
 
