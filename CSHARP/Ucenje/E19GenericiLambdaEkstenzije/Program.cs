@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -69,6 +70,75 @@ namespace Ucenje.E19GenericiLambdaEkstenzije
             {
                 Console.WriteLine(smjer.Naziv);
             }
+
+
+            var datumi = new List<DateTime>();
+
+            datumi.Add(new DateTime(1997, 10, 2));
+            datumi.Add(DateTime.Now);
+
+            foreach(var d in datumi)
+            {
+                Console.WriteLine(d);
+            }
+
+
+            // lambda izrazi
+
+            Console.WriteLine(KlasicnaMedota(5,5));
+            // => lambda
+
+            var Zbroj = (int a, int b) => a + b;
+
+            Console.WriteLine(Zbroj(5,5));
+
+            var Algoritam = (int x, int y) =>
+            {
+                var z = 0;
+                z = ++x;
+                y += z;
+                return x + y + z;
+            };
+
+            Console.WriteLine(Algoritam(2,3));
+
+
+            var Parni = (int i) => i % 2 == 0;
+
+            Console.WriteLine(Parni(7) ? "Parni" : "Neparni");
+
+
+            //ekstenzije
+
+            String ime = "Ana";
+
+            Console.WriteLine(ime.LastOrDefault());
+
+            Console.WriteLine(smjerovi.LastOrDefault());
+
+
+            //korištenje vlastite ekstenzije
+            s.Ispisi();
+
+            var p = new Polaznik() { Sifra = 7, Ime = "Pero" };
+
+            p.Ispisi();
+
+            //zadnji krik ne OOP-a u OOP jeziku je definiranje on the fly
+
+            var nesto = new
+            {
+                Ime = "Pero",
+                Grad = "Osijek",
+                Smjer = s
+            };
+
+            Console.WriteLine(nesto);
+        }
+
+        private int KlasicnaMedota(int a, int b)
+        {
+            return a + b;
         }
     }
 }
