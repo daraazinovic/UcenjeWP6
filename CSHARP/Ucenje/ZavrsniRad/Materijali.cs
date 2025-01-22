@@ -8,7 +8,7 @@ namespace Ucenje.ZavrsniRad
 {
    public class Materijali
     {
-        public string Naziv { get; set; } ""
-        public string Vrsta { get; set; } ""
+        public string Naziv { get; set; } 
+        public string Vrsta { get; set; } 
     }
 }

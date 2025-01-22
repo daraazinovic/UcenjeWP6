@@ -1,17 +1,10 @@
 ﻿
 
 using Ucenje;
-using Ucenje.Pozitivan;
 
-PozitivanNegativanbroj.Izvedi();
+new Ucenje.E20KonzolnaAplikacija.Izbornik();
 
-//PovrsinaPravokutnika.Izvedi();
-
-//LjubavniKalkulator.Izvedi();
-
-//GeneratorLozinki.Izvedi();
-
-//CiklicnaTablica.Izvedi();
+//new Ucenje.E19GenericiLambdaEkstenzije.Program();
 
 //new Ucenje.E18NasljedivanjePolimorfizam.Program("E18");
 

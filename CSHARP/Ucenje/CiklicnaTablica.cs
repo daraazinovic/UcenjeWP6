@@ -24,9 +24,9 @@ namespace Ucenje
             int maxBroj = redovi * stupci;
 
             int gornjaGranica = 0;
-            int donjaGranica = redovi - 1;
+            int donjaGranica = redovi -1;
             int lijevaGranica = 0;
-            int desnaGranica = stupci - 1;
+            int desnaGranica = stupci -1;
 
             while (broj <= maxBroj)
             {
@@ -65,8 +65,9 @@ namespace Ucenje
             for (int i = 0; i < redovi; i++)
             {
                 for (int j = 0; j < stupci; j++)
+               
                 {
-                    Console.Write(String.Format("{0,4}", tablica[i, j]) + "\t");
+                    Console.Write(String.Format("{0,4}", tablica[i, j]) +"\t");
                 }
                 Console.WriteLine();
             }
