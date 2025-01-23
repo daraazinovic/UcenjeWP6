@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 using Ucenje.ZavrsniRad;
 namespace Ucenje.ZavrsniRad
 {
-    public abstract class Entitet : Object
+    public abstract class Entitet 
     {
         public int Sifra { get; set; }
 
-        public override string ToString()
-        {
-            return Sifra.ToString();
-        }
+       
     }
 }

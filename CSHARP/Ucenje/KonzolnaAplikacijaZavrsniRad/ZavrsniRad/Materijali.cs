@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ucenje.ZavrsniRad
 {
-   public class Materijali
+   public class Materijali: Entitet
     {
         public string Naziv { get; set; } 
         public string Vrsta { get; set; } 

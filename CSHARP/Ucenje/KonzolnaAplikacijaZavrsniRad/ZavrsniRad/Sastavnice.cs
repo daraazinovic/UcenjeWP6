@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Ucenje.ZavrsniRad
 {
-    public class Sastavnice
+    public class Sastavnice : Entitet
     {
-        public string Proizvod { get; set; }
-        public string Materijal { get; set; }
+        public List<Proizvodi> Proizvodi { get; set; } 
+        public List<Materijali> Materijali { get; set; }
     }
 }
