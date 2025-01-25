@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic;
-using Ucenje.E20KonzolnaAplikacija.Model;
+﻿using Ucenje.E20KonzolnaAplikacija.Model;
 
 namespace Ucenje.E20KonzolnaAplikacija
 {
@@ -15,14 +14,12 @@ namespace Ucenje.E20KonzolnaAplikacija
 
         }
         public ObradaGrupa(Izbornik izbornik):this()
-
         {
-
             this.Izbornik = izbornik;
-            UcitajTestnePodatke();
+            Ucitajtestnepodatke();
         }
 
-        private void UcitajTestnePodatke()
+        private void Ucitajtestnepodatke()
         {
             var polaznici = new List<Polaznik>();
             polaznici.Add(Izbornik.ObradaPolaznik.Polaznici[0]);
@@ -46,7 +43,6 @@ namespace Ucenje.E20KonzolnaAplikacija
             Console.WriteLine("4. Brisanje grupe");
             Console.WriteLine("5. Brisanje polaznika iz grupe");
             Console.WriteLine("6. Povratak na glavni izbornik");
-
             OdabirOpcijeIzbornika();
         }
 
@@ -74,7 +70,7 @@ namespace Ucenje.E20KonzolnaAplikacija
                     ObrisiPolaznikaIzGrupe();
                     PrikaziIzbornik();
                     break;
-                case 6:                    
+                case 6:
                     Console.Clear();
                     break;
             }
@@ -86,18 +82,15 @@ namespace Ucenje.E20KonzolnaAplikacija
             var g = Grupe[
                 Pomocno.UcitajRasponBroja("Odaberi redni broj grupe na kojima ce se brisati polaznici", 1, Grupe.Count) - 1
                 ];
-            Console.WriteLine("*****************************");
-            Console.WriteLine("Polaznici u grupi");
-            int rb = 0;
-            foreach (var p in g.Polaznici)
-            {
-                Console.WriteLine(++rb + ". " + p.Ime + " " + p.Prezime); // prepisati metodu toString
-            }
-            Console.WriteLine("****************************");
+
+            Izbornik.ObradaPolaznik.PrikaziPolaznike(g.Polaznici, "Popis polaznika u grupi");
+
             var odabrani = g.Polaznici[
-                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za brisanje", 1, g.Polaznici.Count) - 1
+                Pomocno.UcitajRasponBroja("Odaberi redni broj polaznika za brisanje",
+                1, g.Polaznici.Count) - 1
                 ];
-                g.Polaznici.Remove(odabrani);
+            g.Polaznici.Remove(odabrani);
+
         }
 
         private void ObrisiGrupu()

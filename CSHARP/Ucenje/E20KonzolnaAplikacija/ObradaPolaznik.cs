@@ -93,7 +93,7 @@ namespace Ucenje.E20KonzolnaAplikacija
             odabrani.OIB = Pomocno.UcitajString("Unesi OIB polaznika", 50, true);
         }
 
-       public void PrikaziPolaznike()
+        public void PrikaziPolaznike()
         {
             PrikaziPolaznike(Polaznici, "Popis polaznika u aplikaciji");
         }
