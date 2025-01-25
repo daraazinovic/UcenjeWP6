@@ -2,9 +2,9 @@
 
 using Ucenje;
 
-LjubavniKalkulator.Izvedi();
+//LjubavniKalkulator.Izvedi();
 
-//new Ucenje.E20KonzolnaAplikacija.Izbornik();
+new Ucenje.E20KonzolnaAplikacija.Izbornik();
 
 //new Ucenje.E19GenericiLambdaEkstenzije.Program();
 
