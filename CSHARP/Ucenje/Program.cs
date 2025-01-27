@@ -2,9 +2,7 @@
 
 using Ucenje;
 
-LjubavniKalkulator.Izvedi();
-
-//new E21Subota();
+new E21Subota();
 
 //new Ucenje.E20KonzolnaAplikacija.Izbornik();
 
