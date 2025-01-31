@@ -1,6 +1,12 @@
 using EdunovaAPP.Data;
 using Microsoft.EntityFrameworkCore;
 
+// Dobro dodatno èitanje
+// 1. https://medium.com/@robhutton8/entity-framework-vs-repository-pattern-vs-unit-of-work-9fa093bd59e4
+// 2. https://www.thereformedprogrammer.net/is-the-repository-pattern-useful-with-entity-framework-core/
+// 3. https://medium.com/@rabinarayandev/should-you-use-uuids-for-database-keys-597b15b000bb
+// 4. https://blog.stackademic.com/goodbye-swagger-how-net-9-is-redefining-api-documentation-7488456a538f
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
