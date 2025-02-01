@@ -99,6 +99,24 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
             }
         }
 
-       
+        internal static string UcitajString(string v, string naziv)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static decimal UcitajDecimal(string v, decimal cijena)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static string UcitajString(string naziv, string v1, int v2, bool v3)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static float UcitajDecimalniBroj(string v1, float v2, bool v3)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

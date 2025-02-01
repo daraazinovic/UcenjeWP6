@@ -81,18 +81,28 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
         private void PromjeniPodatkeSastavnica()
         {
             PrikaziSastavnice();
-            if (Sastavnica.Count > 0)
+            if (Sastavnica.Count == 0)
             {
-                var odabir = Pomocno.UcitajBroj("Odaberite redni broj sastavnice koju želite promjeniti");
+                Console.WriteLine("Nema sastavnica za promjenu.");
+                return;
+            }
+
+            int odabir;
+            while (true) // Petlja za ponovni unos
+            {
+                odabir = Pomocno.UcitajBroj("Odaberite redni broj sastavnice koju želite promjeniti");
                 if (odabir > 0 && odabir <= Sastavnica.Count)
                 {
-                    var s = Sastavnica[odabir - 1];
-                    s.Naziv = Pomocno.UcitajString(
-                        "Unesite novi naziv sastavnice", s.Naziv);
-                    s.Opis = Pomocno.UcitajString("Unesite novi opis sastavnice", s.Opis);
-                    s.Cijena = Pomocno.UcitajDecimal("Unesite novu cijenu sastavnice", s.Cijena);
+                    break; // Izlaz iz petlje ako je unos ispravan
                 }
+                Console.WriteLine("Neispravan unos. Molim pokušajte ponovno.");
             }
+
+            var odabranaSastavnica = Sastavnica[odabir - 1];
+            odabranaSastavnica.Naziv = Pomocno.UcitajString(
+                "Unesite novi naziv sastavnice", odabranaSastavnica.Naziv);
+            odabranaSastavnica.Opis = Pomocno.UcitajString("Unesite novi opis sastavnice", odabranaSastavnica.Opis);
+            odabranaSastavnica.Cijena = Pomocno.UcitajDecimal("Unesite novu cijenu sastavnice", odabranaSastavnica.Cijena);
         }
 
 
@@ -114,8 +124,5 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
                 Console.WriteLine("{0}. {1} - {2} - {3}", i + 1, Sastavnica[i].Naziv, Sastavnica[i].Opis, Sastavnica[i].Cijena);
             }
         }
-
-    
-
-
+    }
 }

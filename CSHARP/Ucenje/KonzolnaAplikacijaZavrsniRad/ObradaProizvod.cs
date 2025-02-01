@@ -80,7 +80,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
             odabrani.Sifra = Pomocno.UcitajRasponBroja("Unesi šifru proizvoda", 1, int.MaxValue);
             odabrani.Naziv = Pomocno.UcitajString(odabrani.Naziv, "Unesi naziv proizvoda", 50, true);
             odabrani.IzradujeSeOd = Pomocno.UcitajString("Unesi od čega se proizvod izrađuje", 50, true);
-            odabrani.Cijena = Pomocno.UcitajString("Unesi cijenu proizvoda", 50, true);
+            odabrani.Cijena = Pomocno.UcitajDecimalniBroj("Unesi cijenu proizvoda", 50, true );
             odabrani.Namjena = Pomocno.UcitajString("Unesi namjenu proizvoda", 50, true);
         }
 
@@ -88,7 +88,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
         public void PrikaziProizvode()
         {
             Console.WriteLine("*****************************");
-            Console.WriteLine("Polaznici u aplikaciji");
+            Console.WriteLine("Proizvodi u aplikaciji");
             int rb = 0;
             foreach (var p in Proizvodi)
             {
@@ -108,7 +108,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
                 Sifra = Pomocno.UcitajRasponBroja("Unesi šifru proizvoda", 1, int.MaxValue),
                 Naziv = Pomocno.UcitajString("Unesi naziv proizvoda", 50, true),
                 IzradujeSeOd = Pomocno.UcitajString("Unesi od čega se proizvod izrađuje", 70, true),
-                Cijena = Pomocno.UcitajString("Unesi cijenu proizvoda", 50, true),
+                Cijena = Pomocno.UcitajDecimalniBroj("Unesi cijenu proizvoda", 50, true),
                 Namjena = Pomocno.UcitajString("Unesi namjenu proizvoda", 50, true)
             });
         }
