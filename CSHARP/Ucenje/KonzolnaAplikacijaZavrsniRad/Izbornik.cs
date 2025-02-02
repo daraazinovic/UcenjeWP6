@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Ucenje.E20KonzolnaAplikacija;
 using Ucenje.ZavrsniRad;
 
 namespace Ucenje.KonzolnaAplikacijaZavrsniRad
@@ -11,20 +12,48 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
     internal class Izbornik
     {
 
-        public ObradaMaterijali ObradaMaterijali { get; set; }
+        public ObradaMaterijali ObradaMaterijal { get; set; }
         public ObradaProizvod ObradaProizvod { get; set; }
         public ObradaSastavnice ObradaSastavnice { get; set; }
 
         public Izbornik()
         {
             Pomocno.DEV = true;
-            ObradaMaterijali = new ObradaMaterijali();
+            ObradaMaterijal = new ObradaMaterijali();
             ObradaProizvod = new ObradaProizvod();
             ObradaSastavnice = new ObradaSastavnice(this);
             UcitajPodatke();
             PozdravnaPoruka();
             PrikaziIzbornik();
         }
+
+
+        private void UcitajPodatke()
+        {
+            string docPath =
+      Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+
+            if (File.Exists(Path.Combine(docPath, "materijali.json")))
+            {
+                StreamReader file = File.OpenText(Path.Combine(docPath, "materijali.json"));
+                ObradaMaterijal.Materijali = JsonConvert.DeserializeObject<List<Materijal>>(file.ReadToEnd());
+                file.Close();
+            }
+
+            if (File.Exists(Path.Combine(docPath, "proizvodi.json")))
+            {
+                StreamReader file = File.OpenText(Path.Combine(docPath, "proizvodi.json"));
+                ObradaProizvod.Proizvodi = JsonConvert.DeserializeObject<List<Proizvodi>>(file.ReadToEnd());
+                file.Close();
+
+            }
+
+        }
+
+
+      
+
+
 
         private void PrikaziIzbornik()
         {
@@ -41,7 +70,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
             switch (Pomocno.UcitajRasponBroja("Odaberite stavku izbornika", 1, 4))
             {
                 case 1:
-                    ObradaMaterijali.PrikaziIzbornik();
+                    ObradaMaterijal.PrikaziIzbornik();
                     PrikaziIzbornik();
                     break;
                 case 2:
@@ -67,42 +96,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
 
         }
 
-        private void UcitajPodatke()
-        {
-            string docPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string filePath = Path.Combine(docPath, "materijali.json");
-
-            if (File.Exists(filePath))
-            {
-                try
-                {
-                    using (StreamReader file = new StreamReader(filePath)) // using blok
-                    using (JsonTextReader reader = new JsonTextReader(file)) // streaming obrada
-                    {
-                        ObradaMaterijali.Materijal = JsonConvert.DeserializeObject<List<Materijali>>(file.ReadToEnd());
-                    }
-
-                    if (ObradaMaterijali.Materijal == null)
-                    {
-                        // Datoteka je možda prazna ili sadrži nevažeći JSON. Postavite na praznu listu.
-                        ObradaMaterijali.Materijal = new List<Materijali>();
-                        Console.WriteLine("Upozorenje: Datoteka je prazna ili sadrži nevažeći JSON. Učitana je prazna lista.");
-                    }
-                }
-                catch (Exception ex) // Hvatanje iznimki
-                {
-                    Console.WriteLine($"Greška pri učitavanju podataka: {ex.Message}");
-                    // Ovdje možete dodati dodatnu logiku za rukovanje greškom, npr. ponovni pokušaj, postavljanje na default vrijednosti itd.
-                    ObradaMaterijali.Materijal = new List<Materijali>(); // Postavljanje na praznu listu u slučaju greške
-                }
-            }
-            else
-            {
-                Console.WriteLine("Datoteka materijali.json ne postoji.");
-                ObradaMaterijali.Materijal = new List<Materijali>(); // Inicijalizacija na praznu listu ako datoteka ne postoji.
-            }
-
-        } 
+      
 
     }
 

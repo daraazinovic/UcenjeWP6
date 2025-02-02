@@ -92,7 +92,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
             int rb = 0;
             foreach (var p in Proizvodi)
             {
-                Console.WriteLine(++rb + ". " + p.Naziv + " "); // prepisati metodu toString
+                Console.WriteLine(++rb + ". " + p.Naziv); // prepisati metodu toString
             }
             Console.WriteLine("****************************");
 

@@ -12,12 +12,24 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
 
         public List<Materijali> Materijal { get; set; }
         public object Materijale { get; private set; }
+        public List<Materijal>? Materijali { get; internal set; }
 
         public Izbornik Izbornik;
 
         public ObradaMaterijali()
         {
             Materijal = new List<Materijali>();
+            if (Pomocno.DEV)
+            {
+                UcitajTestnePodatke();
+            }
+        }
+
+        private void UcitajTestnePodatke()
+        {
+            Materijal.Add(new() { Naziv = "Keramički prah", Vrsta = "Građevinski" });
+            Materijal.Add(new() { Naziv = "Vosak", Vrsta = "Prirodni" });
+            Materijal.Add(new() { Naziv = "Drvo", Vrsta = "Prirodni" });
         }
 
         public ObradaMaterijali (Izbornik izbornik): this()
@@ -101,21 +113,16 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
         {
             Console.WriteLine("*****************************");
             Console.WriteLine("Materijali u aplikaciji");
-
-            if (Materijal == null || Materijal.Count == 0)
-            {
-                Console.WriteLine("Nema dostupnih materijala.");
-                Console.WriteLine("*****************************");
-                return; // Izlazimo iz metode ako nema materijala
-            }
-
             int rb = 0;
             foreach (var m in Materijal)
             {
-                Console.WriteLine(++rb + ". " + m.Naziv + " (" + m.Vrsta + ")");
+                Console.WriteLine(++rb + ". " + m.Naziv);
             }
             Console.WriteLine("****************************");
         }
+      
+
+
 
         public static void Main(string[] args)
         {

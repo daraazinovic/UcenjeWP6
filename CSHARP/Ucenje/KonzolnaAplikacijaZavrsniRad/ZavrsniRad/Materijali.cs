@@ -10,6 +10,11 @@ namespace Ucenje.ZavrsniRad
     {
         public static int Count { get; internal set; }
         public string Naziv { get; set; } 
-        public string Vrsta { get; set; } 
+        public string Vrsta { get; set; }
+
+        internal static void Add(object value)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
