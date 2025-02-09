@@ -74,7 +74,7 @@ values('Umjetno cvijeće');
 
 
 insert into materijali(naziv,vrsta)
-values('Lamele parketa',1);
+values('Lamele parketa','Drvo hrast');
 
 insert into materijali(naziv,vrsta)
 values('Keramički beton', 2);

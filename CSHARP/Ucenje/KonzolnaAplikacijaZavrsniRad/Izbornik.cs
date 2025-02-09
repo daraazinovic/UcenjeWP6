@@ -14,14 +14,14 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
 
         public ObradaMaterijali ObradaMaterijal { get; set; }
         public ObradaProizvod ObradaProizvod { get; set; }
-        public ObradaSastavnice ObradaSastavnice { get; set; }
+        public ObradaVrste ObradaVrsta { get; set; }
 
         public Izbornik()
         {
             Pomocno.DEV = true;
             ObradaMaterijal = new ObradaMaterijali();
             ObradaProizvod = new ObradaProizvod();
-            ObradaSastavnice = new ObradaSastavnice(this);
+            ObradaVrsta = new ObradaVrste(this);
             UcitajPodatke();
             PozdravnaPoruka();
             PrikaziIzbornik();
@@ -60,7 +60,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
             Console.WriteLine("Izbornik za rad sa aplikacijom");
             Console.WriteLine("1. Rad sa materijalima");
             Console.WriteLine("2. Rad sa proizvodima");
-            Console.WriteLine("3. Rad sa sastavnicama");
+            Console.WriteLine("3. Rad sa vrstama");
             Console.WriteLine("4. Izlaz iz aplikacije");
             OdabirOpcijeIzbornika();
         }
@@ -78,7 +78,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
                     PrikaziIzbornik();
                     break;
                 case 3:
-                    ObradaSastavnice.PrikažiIzbornik();
+                    ObradaVrsta.PrikažiIzbornik();
                     PrikaziIzbornik();
                     break;
                 case 4:

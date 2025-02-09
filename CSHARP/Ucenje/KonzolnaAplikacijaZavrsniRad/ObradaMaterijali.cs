@@ -78,17 +78,13 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
             private void ObrisiMaterijale()
         {
             PrikaziMaterijale();
-            int count = Materijali.Count;
-            var m = Materijal[
-                Pomocno.UcitajRasponBroja("Odaberi redni broj materijala za brisanje", 1, Materijali.Count) - 1
-                ];
-
-
-
-
-            if (Pomocno.UcitajBool("Sigurno obrisati " + m.Naziv + "? (DA/NE)", "da"))
+            if (Materijal.Count > 0)
             {
-                Materijal.Remove(m);
+                var odabir = Pomocno.UcitajBroj("Odaberite redni broj Materijala koju želite obrisati");
+                if (odabir > 0 && odabir <= Materijal.Count)
+                {
+                    Materijal.RemoveAt(odabir - 1);
+                }
             }
         }
 
@@ -96,9 +92,14 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
         private void PromjeniPodatkeMaterijala()
         {
             PrikaziMaterijale();
+            if (Materijal.Count == 0)
+            {
+                Pomocno.PrikaziPoruku("Nema materijala za promjenu.");
+                return; // Prekidamo funkciju ako nema materijala
+            }
             {
                 var m = Materijal[
-                    Pomocno.UcitajRasponBroja("Odaberi redni broj materijala za promjenu", 1, Materijali.Count) - 1
+                    Pomocno.UcitajRasponBroja("Odaberi redni broj materijala za promjenu", 1, int.MaxValue)-1
                     ];
 
                 m.Sifra = Pomocno.UcitajRasponBroja("Unesi šifru materijala", 1, int.MaxValue);

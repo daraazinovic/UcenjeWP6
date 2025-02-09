@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -58,7 +59,7 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
         }
 
 
-        internal static decimal UcitajDecimal(string poruka, decimal min, decimal max)
+        internal static decimal UcitajDecimalniBroj(string poruka, decimal min, decimal max)
         {
             decimal d;
             while (true)
@@ -99,24 +100,72 @@ namespace Ucenje.KonzolnaAplikacijaZavrsniRad
             }
         }
 
+        internal static string UcitajString(string stara, string poruka, int max, bool obavezno)
+        {
+            string s;
+            while (true)
+            {
+                Console.Write(poruka + " (" + stara + "): ");
+                s = Console.ReadLine().Trim();
+                if (s.Length == 0)
+                {
+                    return stara;
+                }
+                if ((obavezno && s.Length == 0) || s.Length > max)
+                {
+                    Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova", max);
+                    continue;
+                }
+                return s;
+            }
+        }
+
+       
+
+        internal static string UcitajString(string poruka, int max, bool obavezno, string StaraVrijednost)
+        {
+            string s;
+            while (true)
+            {
+                Console.Write(poruka + "(" + StaraVrijednost + ") 0 za odustani" + ": ");
+                s = Console.ReadLine().Trim();
+                if (s == "0")
+                {
+                    return StaraVrijednost;
+                }
+                if ((obavezno && s.Length == 0) || s.Length > max)
+                {
+                    Console.WriteLine("Unos obavezan, maksimalno dozvoljeno {0} znakova", max);
+                    continue;
+                }
+                return s;
+            }
+
+       
+        }
+
+        internal static void PrikaziPoruku(string v)
+        {
+            throw new NotImplementedException();
+        }
+
         internal static string UcitajString(string v, string naziv)
         {
-            throw new NotImplementedException();
-        }
+            Console.WriteLine(v);
+            if (!string.IsNullOrEmpty(naziv))
+            {
+                Console.WriteLine($"Trenutna vrijednost: {naziv}");
+            }
 
-        internal static decimal UcitajDecimal(string v, decimal cijena)
-        {
-            throw new NotImplementedException();
-        }
+            string unos = Console.ReadLine();
 
-        internal static string UcitajString(string naziv, string v1, int v2, bool v3)
-        {
-            throw new NotImplementedException();
-        }
+            // Ako je unos prazan, vraćamo trenutnu vrijednost (ako postoji)
+            if (string.IsNullOrEmpty(unos))
+            {
+                return naziv;
+            }
 
-        internal static float UcitajDecimalniBroj(string v1, float v2, bool v3)
-        {
-            throw new NotImplementedException();
+            return unos;
         }
     }
 }
